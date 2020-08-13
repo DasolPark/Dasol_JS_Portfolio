@@ -13,6 +13,7 @@
 
   --previewShadow: #f0ead6;
   --previewBg: rgb(251, 249, 243, 0.8);
+  --previewBorderColor: #17a2b8;
 
   --buttonColor: #000;
 
@@ -170,10 +171,135 @@ h6 {
   box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
 }
 
-.left-column {
+.column-left {
   grid-area: leftColumn;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
-.right-column {
+.column-left .avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.theme-options-wrapper {
+  display: flex;
+}
+
+.theme-option {
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  border-radius: 50%;
+  margin: 10px;
+  border: 2px solid var(--borderColor);
+  cursor: pointer;
+
+  -webkit-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+}
+
+.theme-option:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.theme-option.light {
+  background-color: #fff;
+}
+
+.theme-option.blue {
+  background-color: #192734;
+}
+
+.theme-option.green {
+  background-color: #78866b;
+}
+
+.theme-option.purple {
+  background-color: #7e4c74;
+}
+
+.theme-note {
+  font-size: 12px;
+  font-style: italic;
+  text-align: center;
+}
+
+.column-right {
   grid-area: rightColumn;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 50px;
+}
+
+.preview-shadow {
+  background-color: var(--previewShadow);
+  width: 320px;
+  height: 220px;
+  padding-left: 30px;
+  padding-top: 30px;
+}
+
+.preview {
+  width: 320px;
+  background-color: var(--previewBg);
+  border: 1.5px solid var(--previewBorderColor);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+
+.corner {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: 1.5px solid var(--previewBorderColor);
+  position: absolute;
+}
+
+.corner.tl {
+  left: -5.1px;
+  top: -5.1px;
+}
+
+.corner.tr {
+  right: -5px;
+  top: -5px;
+}
+
+.corner.bl {
+  left: -5px;
+  bottom: -5px;
+}
+
+.corner.br {
+  right: -5px;
+  bottom: -5px;
+}
+
+@media screen and (max-width: 1200px) {
+  .main-container {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .intro-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'navigation'
+      'leftColumn'
+      'rightColumn';
+  }
 }
