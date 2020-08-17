@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hi, I'm Dasol Park</title>
     <link rel="stylesheet" href="default.css" />
+    <link id="theme-style" rel="stylesheet" href="default.css" />
   </head>
   <body>
     <section class="s1">
@@ -31,10 +32,26 @@
             <img src="./images/avatar.jpg" class="avatar" alt="avatar" />
             <h5>Personalize Theme</h5>
             <div class="theme-options-wrapper">
-              <div class="theme-option light" id="light-mode"></div>
-              <div class="theme-option blue" id="blue-mode"></div>
-              <div class="theme-option green" id="green-mode"></div>
-              <div class="theme-option purple" id="purple-mode"></div>
+              <div
+                class="theme-option light"
+                id="light-mode"
+                data-theme="light"
+              ></div>
+              <div
+                class="theme-option blue"
+                id="blue-mode"
+                data-theme="blue"
+              ></div>
+              <div
+                class="theme-option green"
+                id="green-mode"
+                data-theme="green"
+              ></div>
+              <div
+                class="theme-option purple"
+                id="purple-mode"
+                data-theme="purple"
+              ></div>
             </div>
             <p class="theme-note">
               *Theme settings will be saved for <br />your next visit
@@ -99,7 +116,7 @@
             <div class="img-wrapper">
               <img src="./images/avatar.jpg" alt="Social Preview" />
             </div>
-            <h5>Find me on Tistory & Youtube</h5>
+            <h3 style="text-align: center;">Find me on Tistory & Youtube</h3>
             <a href="#" target="_blank">Tistory</a>
             <a href="#" target="_blank">Youtube</a>
           </div>
