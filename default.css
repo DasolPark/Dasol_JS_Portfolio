@@ -5,6 +5,7 @@
   --secondaryColor: #fff;
 
   --borderColor: #c1c1c1;
+  --outlineColor: #979696;
 
   --mainText: #000;
   --secondaryText: #4b5156;
@@ -371,6 +372,81 @@ h6 {
 
 .project-preview p {
   font-size: 12px;
+}
+
+.contact-heading {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--mainColor);
+  padding: 30px;
+  max-width: 600px;
+  margin: 50px auto;
+  margin-top: 30px;
+  border: 1px solid var(--borderColor);
+  border-radius: 5px;
+}
+
+.contact-form div {
+  width: 100%;
+}
+
+.contact-form label {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.contact-form input[type='text'],
+.contact-form input[type='email'] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--borderColor);
+  border-radius: 5px;
+}
+
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid var(--borderColor);
+  border-radius: 5px;
+  padding: 20px 10px;
+}
+
+.contact-form input[type='text']:focus,
+.contact-form input[type='email']:focus,
+.contact-form textarea:focus {
+  outline-width: 2px;
+  outline-color: var(--outlineColor);
+}
+
+.btn {
+  background-color: #000;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  margin: 20px auto;
+  padding: 10px;
+  width: 100%;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.send-btn {
+  margin: 20px 0 0 0;
+}
+
+.send-btn:active {
+  transform: scale(0.98);
 }
 
 @media screen and (max-width: 1200px) {

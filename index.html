@@ -150,8 +150,35 @@
     <section class="s2">
       <a name="contact"></a>
       <div class="main-container">
-        Contact
+        <h3 class="contact-heading">Get In Touch</h3>
+        <form class="contact-form" id="contact-form">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" autocomplete="off" />
+          </div>
+          <div>
+            <label for="Subject">Subject</label>
+            <input type="text" name="subject" autocomplete="off" />
+          </div>
+          <div>
+            <label for="Email">Email</label>
+            <input type="email" name="email" autocomplete="off" />
+          </div>
+          <div>
+            <label for="Message">Message</label>
+            <textarea name="message" autocomplete="off"></textarea>
+          </div>
+
+          <input
+            type="submit"
+            class="send-btn btn"
+            id="send-email"
+            value="Send Email"
+          />
+        </form>
       </div>
     </section>
+
+    <script src="script.js"></script>
   </body>
 </html>
