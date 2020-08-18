@@ -4,13 +4,13 @@ const themeInitial = getLocalStorageTheme();
 
 function setTheme(mode) {
   if (mode === 'light' || mode === null) {
-    document.getElementById('theme-style').href = 'default.css';
+    document.getElementById('theme-style').href = './css/default.css';
   } else if (mode === 'blue') {
-    document.getElementById('theme-style').href = 'blue.css';
+    document.getElementById('theme-style').href = './css/blue.css';
   } else if (mode === 'green') {
-    document.getElementById('theme-style').href = 'green.css';
+    document.getElementById('theme-style').href = './css/green.css';
   } else if (mode === 'purple') {
-    document.getElementById('theme-style').href = 'purple.css';
+    document.getElementById('theme-style').href = './css/purple.css';
   }
 
   setLocalStorageTheme(mode);
