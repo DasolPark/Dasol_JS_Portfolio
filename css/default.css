@@ -389,11 +389,26 @@ h6 {
 .project-preview h6 {
   color: #000;
   margin: 0;
+  font-size: 1.3rem;
+  font-style: italic;
 }
 
 .project-preview p {
   color: #000;
   font-size: 1rem;
+  font-style: italic;
+}
+
+.project-preview a::after {
+  display: block;
+  content: '';
+  border-bottom: solid 2px #019fb6;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+
+.project-preview a:hover::after {
+  transform: scaleX(1);
 }
 
 .contact-heading {
